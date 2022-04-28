@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import Brewery from './Brewery';
 
 function Search() {
     const [breweries, setBreweries] = useState([]);
     const [search, setSearch] = useState("");
+    const [page, setPage] = useState(1);
 
     useEffect(() => {
         async function fetchData() {
@@ -12,7 +14,11 @@ function Search() {
             setBreweries(response.data);
         }
         fetchData();
-    }, [search])
+    }, [search]);
+
+    const loadMore = () => {
+        setPage(page+1);
+    }
 
     return (
         <div>
@@ -24,13 +30,13 @@ function Search() {
             />
 
             {
-                breweries.map(
-                    (brewery, id) => <div key={id}>
-                        {brewery.name}
-                    </div>
+                breweries.slice(0, page*5).map(
+                    (brewery, id) => 
+                        <Brewery key={id} name={brewery.name} />
                 )
             }
 
+            <button onClick={loadMore}>Load More</button>
         </div>
     )
 }
