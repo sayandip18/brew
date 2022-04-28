@@ -10,9 +10,14 @@ function Search() {
     const [page, setPage] = useState(1);
 
     useEffect(() => {
+        setSearch(window.localStorage.getItem('search'));
+    }, [])
+
+    useEffect(() => {
         const fetchDataDelay = setTimeout(async () => {
             const response = await axios.get(`https://api.openbrewerydb.org/breweries/search?query=${search}`);
             setBreweries(response.data);
+            window.localStorage.setItem('search', search);
         }, 1000)
 
         return () => clearTimeout(fetchDataDelay)
