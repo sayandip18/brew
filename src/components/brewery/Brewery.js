@@ -9,13 +9,14 @@ function Brewery() {
     const [info, setInfo] = useState();
 
     useEffect(() => {
-        async function fetchData() {
+        const fetchData = async () => {
             const response = await axios.get(`https://api.openbrewerydb.org/breweries/${breweryId}`);
             setInfo(response.data);
-            console.log(info);
         }
         fetchData();
     }, []);
+
+    if(!info) return <>Loading...</>;
 
     return (
         <div className="container">
