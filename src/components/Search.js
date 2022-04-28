@@ -11,7 +11,7 @@ function Search() {
     useEffect(() => {
         async function fetchData() {
             const response = await axios.get(`https://api.openbrewerydb.org/breweries/search?query=${search}`);
-            console.log(response);
+            // console.log(response);
             setBreweries(response.data);
         }
         fetchData();
