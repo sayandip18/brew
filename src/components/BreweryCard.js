@@ -1,8 +1,13 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-function BreweryCard({name}) {
+function BreweryCard(props) {
+  console.log(props.id);
   return (
-    <div>{name}</div>
+    <div>
+      {props.name}
+      <Link to={`/brewery/${props.id}`}>Show Details</Link>
+    </div>
   )
 }
 

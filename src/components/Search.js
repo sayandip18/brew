@@ -32,8 +32,8 @@ function Search() {
 
             {
                 breweries.slice(0, page*5).map(
-                    (brewery, id) => 
-                        <BreweryCard key={id} name={brewery.name} />
+                    (brewery, id) =>
+                        <BreweryCard key={id} name={brewery.name} id={brewery.id} />
                 )
             }
 
