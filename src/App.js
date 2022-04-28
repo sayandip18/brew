@@ -1,11 +1,16 @@
-import './App.css';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+
+import Brewery from './components/Brewery';
 import Search from './components/Search';
 
 function App() {
   return (
-    <div>
-      <Search />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Search />} />
+        <Route path="/brewery" element={<Brewery />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

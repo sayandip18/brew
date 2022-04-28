@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import Brewery from './Brewery';
+
+import BreweryCard from './BreweryCard';
 
 function Search() {
     const [breweries, setBreweries] = useState([]);
@@ -32,7 +33,7 @@ function Search() {
             {
                 breweries.slice(0, page*5).map(
                     (brewery, id) => 
-                        <Brewery key={id} name={brewery.name} />
+                        <BreweryCard key={id} name={brewery.name} />
                 )
             }
 
