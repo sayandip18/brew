@@ -11,10 +11,9 @@ function Search() {
 
     useEffect(() => {
         const fetchDataDelay = setTimeout(async () => {
-            console.log(search)
             const response = await axios.get(`https://api.openbrewerydb.org/breweries/search?query=${search}`);
             setBreweries(response.data);
-        }, 3000)
+        }, 1000)
 
         return () => clearTimeout(fetchDataDelay)
     }, [search]);

@@ -1,0 +1,34 @@
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.info{
+    height: 30px;
+    width: 50%;
+    background-color: rgb(207, 206, 206);
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 5px;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    width: 60px;
+    background-color: gray;
+    border: none;
+    height: 30px;
+    border-radius: 10px; 
+}
