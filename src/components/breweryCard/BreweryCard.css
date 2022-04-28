@@ -1,0 +1,17 @@
+.card{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    background-color: rgb(202, 202, 202);
+    border-radius: 5px;
+    padding: 5%;
+    text-align: center;
+}
+
+.name {
+    margin-bottom: 5px;
+}

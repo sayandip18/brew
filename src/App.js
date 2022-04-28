@@ -1,7 +1,7 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
-import Brewery from './components/Brewery';
-import Search from './components/Search';
+import Brewery from './components/brewery/Brewery';
+import Search from './components/search/Search';
 
 function App() {
   return (

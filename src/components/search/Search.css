@@ -1,0 +1,31 @@
+.search{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-container{
+    display: flex;
+    justify-content: center;
+}
+
+.txt-input{
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 30px;
+    width: 50%;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 30%;
+    border: none;
+    height: 40px;
+    font-weight: 700;
+    background-color: gray;
+}
